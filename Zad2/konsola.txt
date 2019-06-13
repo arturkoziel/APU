@@ -1,0 +1,81 @@
+> library(ahp)
+> library(data.tree)
+> setwd("C:/Users/Desktop/APU/2")
+> treeAhp <- Load("tree_design.yml")
+> print(treeAhp, filterFun = isNotLeaf)
+       levelName
+1 Buy Fridge    
+2  ¦--efficiency
+3  ¦--quality   
+4  ¦--style     
+5  °--price     
+> Calculate(treeAhp)
+> print(treeAhp, priority = function(x) x$parent$priority["Total", x$name])
+                                     levelName      priority
+1  Buy Fridge                                             NA
+2   ¦--efficiency                              0.56487557106
+3   ¦   ¦--LG GSL761PZU                        0.04505642678
+4   ¦   ¦--Amica FD2325.4XI                    0.01963920841
+5   ¦   ¦--Samsung RB37J501MB1                 0.08671225511
+6   ¦   ¦--Samsung RB33N341MSS                 0.08386666584
+7   ¦   ¦--Samsung RS50N3913BC                 0.12710819043
+8   ¦   ¦--LG Premium GBB59PZRZS               0.19575048700
+9   ¦   ¦--Samsung Chef Collection RB41J7839S4 0.31571665133
+10  ¦   ¦--Bosch KGN39MB3A                     0.09274993434
+11  ¦   ¦--Amica FK205.4                       0.01702383167
+12  ¦   °--Amica FK2695.4FTHAA                 0.01637634909
+13  ¦--quality                                 0.30028867518
+14  ¦   ¦--LG GSL761PZU                        0.05378823931
+15  ¦   ¦--Amica FD2325.4XI                    0.01587650848
+16  ¦   ¦--Samsung RB37J501MB1                 0.06996025053
+17  ¦   ¦--Samsung RB33N341MSS                 0.19554655340
+18  ¦   ¦--Samsung RS50N3913BC                 0.06536581230
+19  ¦   ¦--LG Premium GBB59PZRZS               0.24260567185
+20  ¦   ¦--Samsung Chef Collection RB41J7839S4 0.24380192365
+21  ¦   ¦--Bosch KGN39MB3A                     0.08185765472
+22  ¦   ¦--Amica FK205.4                       0.01605457184
+23  ¦   °--Amica FK2695.4FTHAA                 0.01514281392
+24  ¦--style                                   0.08308046607
+25  ¦   ¦--LG GSL761PZU                        0.06568513017
+26  ¦   ¦--Amica FD2325.4XI                    0.04735734134
+27  ¦   ¦--Samsung RB37J501MB1                 0.05236346942
+28  ¦   ¦--Samsung RB33N341MSS                 0.07991505506
+29  ¦   ¦--Samsung RS50N3913BC                 0.10724438112
+30  ¦   ¦--LG Premium GBB59PZRZS               0.27609352664
+31  ¦   ¦--Samsung Chef Collection RB41J7839S4 0.23693131876
+32  ¦   ¦--Bosch KGN39MB3A                     0.09175885652
+33  ¦   ¦--Amica FK205.4                       0.02662328091
+34  ¦   °--Amica FK2695.4FTHAA                 0.01602764005
+35  °--price                                   0.05175528768
+36      ¦--LG GSL761PZU                        0.27525071092
+37      ¦--Amica FD2325.4XI                    0.01970015949
+38      ¦--Samsung RB37J501MB1                 0.24548279583
+39      ¦--Samsung RB33N341MSS                 0.15408767704
+40      ¦--Samsung RS50N3913BC                 0.07667698155
+41      ¦--LG Premium GBB59PZRZS               0.11092519865
+42      ¦--Samsung Chef Collection RB41J7839S4 0.02846812291
+43      ¦--Bosch KGN39MB3A                     0.04580218120
+44      ¦--Amica FK205.4                       0.02502819698
+45      °--Amica FK2695.4FTHAA                 0.01857797543
+> Visualize(treeAhp)
+> Analyze(treeAhp)
+                 Weight Samsung Chef Collection RB41J7839S4 LG Premium GBB59PZRZS
+1 Buy Fridge     100.0%                               27.3%                 21.2%
+2  ¦--efficiency  56.5%                               17.8%                 11.1%
+3  ¦--quality     30.0%                                7.3%                  7.3%
+4  ¦--style        8.3%                                2.0%                  2.3%
+5  °--price        5.2%                                0.1%                  0.6%
+  Samsung RB33N341MSS Samsung RS50N3913BC Samsung RB37J501MB1 Bosch KGN39MB3A LG GSL761PZU
+1               12.1%               10.4%                8.7%            8.7%         6.1%
+2                4.7%                7.2%                4.9%            5.2%         2.5%
+3                5.9%                2.0%                2.1%            2.5%         1.6%
+4                0.7%                0.9%                0.4%            0.8%         0.5%
+5                0.8%                0.4%                1.3%            0.2%         1.4%
+  Amica FD2325.4XI Amica FK205.4 Amica FK2695.4FTHAA Inconsistency
+1             2.1%          1.8%                1.6%         11.9%
+2             1.1%          1.0%                0.9%         22.4%
+3             0.5%          0.5%                0.5%         27.1%
+4             0.4%          0.2%                0.1%         56.0%
+5             0.1%          0.1%                0.1%         23.3%
+> AnalyzeTable(treeAhp)
+> 

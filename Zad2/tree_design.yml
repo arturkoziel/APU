@@ -1,0 +1,284 @@
+Version: 2
+
+Alternatives: &alternatives
+ LG GSL761PZU:
+  pojemnosc uzytkowa lodowki: 405 l
+  pojemnosc uzytkowa zamrazaki: 196 l
+  wysokosc: 179 cm
+  poziom halasu: 39 dB
+  kolor: srebrny
+  cena: 4299 zl
+ Amica FD2325.4XI:
+  pojemnosc uzytkowa lodowki: 160 l
+  pojemnosc uzytkowa zamrazaki: 44 l
+  wysokosc: 144 cm
+  poziom halasu: 40 dB
+  kolor: srebrny
+  cena: 1099 zl
+ Samsung RB37J501MB1:
+  pojemnosc uzytkowa lodowki: 255 l
+  pojemnosc uzytkowa zamrazaki: 98 l
+  wysokosc: 201 cm
+  poziom halasu: 39 dB
+  kolor: czarny
+  cena: 2199 zl
+ Samsung RB33N341MSS:
+  pojemnosc uzytkowa lodowki: 217 l
+  pojemnosc uzytkowa zamrazaki: 98 l
+  wysokosc: 185 cm
+  poziom halasu: 38 dB
+  kolor: srebrny
+  cena: 2199 zl
+ Samsung RS50N3913BC:
+  pojemnosc uzytkowa lodowki: 357 l
+  pojemnosc uzytkowa zamrazaki: 144 l
+  wysokosc: 179 cm
+  poziom halasu: 43 dB
+  kolor: czarny
+  cena: 4399 zl
+ LG Premium GBB59PZRZS:
+  pojemnosc uzytkowa lodowki: 225 l
+  pojemnosc uzytkowa zamrazaki: 75 l
+  wysokosc: 190 cm
+  poziom halasu: 37 dB
+  kolor: srebrny
+  cena: 1749 zl
+ Samsung Chef Collection RB41J7839S4:
+  pojemnosc uzytkowa lodowki: 276 l
+  pojemnosc uzytkowa zamrazaki: 130 l
+  wysokosc: 201 cm
+  poziom halasu: 39 dB
+  kolor: srebrny
+  cena: 3499 zl
+ Bosch KGN39MB3A:
+  pojemnosc uzytkowa lodowki: 279 l
+  pojemnosc uzytkowa zamrazaki: 87 l
+  wysokosc: 203 cm
+  poziom halasu: 39 dB
+  kolor: czarny
+  cena: 2499 zl
+ Amica FK205.4:
+  pojemnosc uzytkowa lodowki: 100 l
+  pojemnosc uzytkowa zamrazaki: 56 l
+  wysokosc: 144 cm
+  poziom halasu: 40 dB
+  kolor: bialy
+  cena: 969 zl
+ Amica FK2695.4FTHAA:
+  pojemnosc uzytkowa lodowki: 161 l
+  pojemnosc uzytkowa zamrazaki: 70 l
+  wysokosc: 170 cm
+  poziom halasu: 42 dB
+  kolor: grafitowy
+  cena: 1699 zl
+
+
+
+Goal:
+ name: Buy Fridge
+ author: Artur Koziel
+ preferences:
+  pairwise:
+  - [efficiency, quality, 3]
+  - [efficiency, style, 8]
+  - [efficiency, price, 6]
+  - [quality, style, 6]
+  - [quality, price, 6]
+  - [style,   price, 3]
+ children:
+  efficiency:
+   preferences:
+    pairwise:
+     - [ LG GSL761PZU,  Amica FD2325.4XI, 7]
+     - [ LG GSL761PZU,  Samsung RB37J501MB1, 1/3]
+     - [ LG GSL761PZU,  Samsung RB33N341MSS, 1/4]
+     - [ LG GSL761PZU,  Samsung RS50N3913BC, 1/5]
+     - [ LG GSL761PZU,  Amica FK2695.4FTHAA, 5]
+     - [ LG GSL761PZU,  LG Premium GBB59PZRZS, 1/4]
+     - [ LG GSL761PZU,  Samsung Chef Collection RB41J7839S4, 1/9]
+     - [ LG GSL761PZU,  Bosch KGN39MB3A, 1/6]
+     - [ LG GSL761PZU,  Amica FK205.4, 6]
+     - [ Amica FD2325.4XI,  Samsung RB37J501MB1, 1/7]
+     - [ Amica FD2325.4XI,  Samsung RB33N341MSS, 1/6]
+     - [ Amica FD2325.4XI,  Samsung RS50N3913BC, 1/6]
+     - [ Amica FD2325.4XI,  Amica FK2695.4FTHAA, 2]
+     - [ Amica FD2325.4XI,  LG Premium GBB59PZRZS, 1/7]
+     - [ Amica FD2325.4XI,  Samsung Chef Collection RB41J7839S4, 1/9]
+     - [ Amica FD2325.4XI,  Bosch KGN39MB3A, 1/6]
+     - [ Amica FD2325.4XI,  Amica FK205.4, 3]
+     - [ Samsung RB37J501MB1,  Samsung RB33N341MSS, 1/3]
+     - [ Samsung RB37J501MB1,  Samsung RS50N3913BC, 1/4]
+     - [ Samsung RB37J501MB1,  Amica FK2695.4FTHAA, 4]
+     - [ Samsung RB37J501MB1,  LG Premium GBB59PZRZS, 1/2]
+     - [ Samsung RB37J501MB1,  Samsung Chef Collection RB41J7839S4, 1/4]
+     - [ Samsung RB37J501MB1,  Bosch KGN39MB3A, 3]
+     - [ Samsung RB37J501MB1,  Amica FK205.4, 6]
+     - [ Samsung RB33N341MSS,  Samsung RS50N3913BC, 1/2]
+     - [ Samsung RB33N341MSS,  Amica FK2695.4FTHAA, 6]
+     - [ Samsung RB33N341MSS,  LG Premium GBB59PZRZS, 1/3]
+     - [ Samsung RB33N341MSS,  Samsung Chef Collection RB41J7839S4, 1/8]
+     - [ Samsung RB33N341MSS,  Bosch KGN39MB3A, 1/3]
+     - [ Samsung RB33N341MSS,  Amica FK205.4, 4]
+     - [ Samsung RS50N3913BC,  Amica FK2695.4FTHAA, 3]
+     - [ Samsung RS50N3913BC,  LG Premium GBB59PZRZS, 1/6]
+     - [ Samsung RS50N3913BC,  Samsung Chef Collection RB41J7839S4, 1/5]
+     - [ Samsung RS50N3913BC,  Bosch KGN39MB3A, 3]
+     - [ Samsung RS50N3913BC,  Amica FK205.4, 7]
+     - [ Amica FK2695.4FTHAA,  LG Premium GBB59PZRZS, 1/8]
+     - [ Amica FK2695.4FTHAA,  Samsung Chef Collection RB41J7839S4, 1/9]
+     - [ Amica FK2695.4FTHAA,  Bosch KGN39MB3A, 1/6]
+     - [ Amica FK2695.4FTHAA,  Amica FK205.4, 1/2]
+     - [ LG Premium GBB59PZRZS,  Samsung Chef Collection RB41J7839S4, 1/3]
+     - [ LG Premium GBB59PZRZS,  Bosch KGN39MB3A, 3]
+     - [ LG Premium GBB59PZRZS,  Amica FK205.4, 8]
+     - [ Samsung Chef Collection RB41J7839S4,  Bosch KGN39MB3A, 4]
+     - [ Samsung Chef Collection RB41J7839S4,  Amica FK205.4, 8]
+     - [ Bosch KGN39MB3A,  Amica FK205.4, 4]
+   children: *alternatives
+  quality:
+   preferences:
+    pairwise:
+     - [ LG GSL761PZU,  Amica FD2325.4XI, 8]
+     - [ LG GSL761PZU,  Samsung RB37J501MB1, 1/3]
+     - [ LG GSL761PZU,  Samsung RB33N341MSS, 1/3]
+     - [ LG GSL761PZU,  Samsung RS50N3913BC, 1/4]
+     - [ LG GSL761PZU,  Amica FK2695.4FTHAA, 9]
+     - [ LG GSL761PZU,  LG Premium GBB59PZRZS, 1/3]
+     - [ LG GSL761PZU,  Samsung Chef Collection RB41J7839S4, 1/4]
+     - [ LG GSL761PZU,  Bosch KGN39MB3A, 1/2]
+     - [ LG GSL761PZU,  Amica FK205.4, 4]
+     - [ Amica FD2325.4XI,  Samsung RB37J501MB1, 1/8]
+     - [ Amica FD2325.4XI,  Samsung RB33N341MSS, 1/7]
+     - [ Amica FD2325.4XI,  Samsung RS50N3913BC, 1/9]
+     - [ Amica FD2325.4XI,  Amica FK2695.4FTHAA, 2]
+     - [ Amica FD2325.4XI,  LG Premium GBB59PZRZS, 1/6]
+     - [ Amica FD2325.4XI,  Samsung Chef Collection RB41J7839S4, 1/8]
+     - [ Amica FD2325.4XI,  Bosch KGN39MB3A, 1/6]
+     - [ Amica FD2325.4XI,  Amica FK205.4, 1]
+     - [ Samsung RB37J501MB1,  Samsung RB33N341MSS, 1/3]
+     - [ Samsung RB37J501MB1,  Samsung RS50N3913BC, 2]
+     - [ Samsung RB37J501MB1,  Amica FK2695.4FTHAA, 6]
+     - [ Samsung RB37J501MB1,  LG Premium GBB59PZRZS, 1/4]
+     - [ Samsung RB37J501MB1,  Samsung Chef Collection RB41J7839S4, 1/6]
+     - [ Samsung RB37J501MB1,  Bosch KGN39MB3A, 1/3]
+     - [ Samsung RB37J501MB1,  Amica FK205.4, 6]
+     - [ Samsung RB33N341MSS,  Samsung RS50N3913BC, 4]
+     - [ Samsung RB33N341MSS,  Amica FK2695.4FTHAA, 6]
+     - [ Samsung RB33N341MSS,  LG Premium GBB59PZRZS, 1/7]
+     - [ Samsung RB33N341MSS,  Samsung Chef Collection RB41J7839S4, 4]
+     - [ Samsung RB33N341MSS,  Bosch KGN39MB3A, 4]
+     - [ Samsung RB33N341MSS,  Amica FK205.4, 4]
+     - [ Samsung RS50N3913BC,  Amica FK2695.4FTHAA, 6]
+     - [ Samsung RS50N3913BC,  LG Premium GBB59PZRZS, 1/4]
+     - [ Samsung RS50N3913BC,  Samsung Chef Collection RB41J7839S4, 1/8]
+     - [ Samsung RS50N3913BC,  Bosch KGN39MB3A, 1/3]
+     - [ Samsung RS50N3913BC,  Amica FK205.4, 6]
+     - [ Amica FK2695.4FTHAA,  LG Premium GBB59PZRZS, 1/9]
+     - [ Amica FK2695.4FTHAA,  Samsung Chef Collection RB41J7839S4, 1/6]
+     - [ Amica FK2695.4FTHAA,  Bosch KGN39MB3A, 1/4]
+     - [ Amica FK2695.4FTHAA,  Amica FK205.4, 1]
+     - [ LG Premium GBB59PZRZS,  Samsung Chef Collection RB41J7839S4, 1/3]
+     - [ LG Premium GBB59PZRZS,  Bosch KGN39MB3A, 3]
+     - [ LG Premium GBB59PZRZS,  Amica FK205.4, 9]
+     - [ Samsung Chef Collection RB41J7839S4,  Bosch KGN39MB3A, 6]
+     - [ Samsung Chef Collection RB41J7839S4,  Amica FK205.4, 9]
+     - [ Bosch KGN39MB3A,  Amica FK205.4, 6]
+   children: *alternatives
+  style:
+   preferences:
+    pairwise:
+     - [ LG GSL761PZU,  Amica FD2325.4XI, 4]
+     - [ LG GSL761PZU,  Samsung RB37J501MB1, 6]
+     - [ LG GSL761PZU,  Samsung RB33N341MSS, 1/4]
+     - [ LG GSL761PZU,  Samsung RS50N3913BC, 1/5]
+     - [ LG GSL761PZU,  Amica FK2695.4FTHAA, 5]
+     - [ LG GSL761PZU,  LG Premium GBB59PZRZS, 1/4]
+     - [ LG GSL761PZU,  Samsung Chef Collection RB41J7839S4, 1/9]
+     - [ LG GSL761PZU,  Bosch KGN39MB3A, 1/6]
+     - [ LG GSL761PZU,  Amica FK205.4, 7]
+     - [ Amica FD2325.4XI,  Samsung RB37J501MB1, 1/7]
+     - [ Amica FD2325.4XI,  Samsung RB33N341MSS, 1/6]
+     - [ Amica FD2325.4XI,  Samsung RS50N3913BC, 1/4]
+     - [ Amica FD2325.4XI,  Amica FK2695.4FTHAA, 4]
+     - [ Amica FD2325.4XI,  LG Premium GBB59PZRZS, 1/7]
+     - [ Amica FD2325.4XI,  Samsung Chef Collection RB41J7839S4, 1/8]
+     - [ Amica FD2325.4XI,  Bosch KGN39MB3A, 5]
+     - [ Amica FD2325.4XI,  Amica FK205.4, 1/3]
+     - [ Samsung RB37J501MB1,  Samsung RB33N341MSS, 1/5]
+     - [ Samsung RB37J501MB1,  Samsung RS50N3913BC, 1/8]
+     - [ Samsung RB37J501MB1,  Amica FK2695.4FTHAA, 8]
+     - [ Samsung RB37J501MB1,  LG Premium GBB59PZRZS, 1/9]
+     - [ Samsung RB37J501MB1,  Samsung Chef Collection RB41J7839S4, 1/9]
+     - [ Samsung RB37J501MB1,  Bosch KGN39MB3A, 1/5]
+     - [ Samsung RB37J501MB1,  Amica FK205.4, 6]
+     - [ Samsung RB33N341MSS,  Samsung RS50N3913BC, 1/3]
+     - [ Samsung RB33N341MSS,  Amica FK2695.4FTHAA, 5]
+     - [ Samsung RB33N341MSS,  LG Premium GBB59PZRZS, 1/9]
+     - [ Samsung RB33N341MSS,  Samsung Chef Collection RB41J7839S4, 1/8]
+     - [ Samsung RB33N341MSS,  Bosch KGN39MB3A, 1/3]
+     - [ Samsung RB33N341MSS,  Amica FK205.4, 4]
+     - [ Samsung RS50N3913BC,  Amica FK2695.4FTHAA, 4]
+     - [ Samsung RS50N3913BC,  LG Premium GBB59PZRZS, 1/6]
+     - [ Samsung RS50N3913BC,  Samsung Chef Collection RB41J7839S4, 1/5]
+     - [ Samsung RS50N3913BC,  Bosch KGN39MB3A, 1]
+     - [ Samsung RS50N3913BC,  Amica FK205.4, 3]
+     - [ Amica FK2695.4FTHAA,  LG Premium GBB59PZRZS, 1/5]
+     - [ Amica FK2695.4FTHAA,  Samsung Chef Collection RB41J7839S4, 1/4]
+     - [ Amica FK2695.4FTHAA,  Bosch KGN39MB3A, 1/4]
+     - [ Amica FK2695.4FTHAA,  Amica FK205.4, 1/2]
+     - [ LG Premium GBB59PZRZS,  Samsung Chef Collection RB41J7839S4, 3]
+     - [ LG Premium GBB59PZRZS,  Bosch KGN39MB3A, 6]
+     - [ LG Premium GBB59PZRZS,  Amica FK205.4, 4]
+     - [ Samsung Chef Collection RB41J7839S4,  Bosch KGN39MB3A, 4]
+     - [ Samsung Chef Collection RB41J7839S4,  Amica FK205.4, 7]
+     - [ Bosch KGN39MB3A,  Amica FK205.4, 4]
+   children: *alternatives
+  price:
+   preferences:
+    pairwise:
+     - [ LG GSL761PZU,  Amica FD2325.4XI, 6]
+     - [ LG GSL761PZU,  Samsung RB37J501MB1, 3]
+     - [ LG GSL761PZU,  Samsung RB33N341MSS, 3]
+     - [ LG GSL761PZU,  Samsung RS50N3913BC, 3]
+     - [ LG GSL761PZU,  Amica FK2695.4FTHAA, 7]
+     - [ LG GSL761PZU,  LG Premium GBB59PZRZS, 5]
+     - [ LG GSL761PZU,  Samsung Chef Collection RB41J7839S4, 9]
+     - [ LG GSL761PZU,  Bosch KGN39MB3A, 8]
+     - [ LG GSL761PZU,  Amica FK205.4, 8]
+     - [ Amica FD2325.4XI,  Samsung RB37J501MB1, 1/5]
+     - [ Amica FD2325.4XI,  Samsung RB33N341MSS, 1/6]
+     - [ Amica FD2325.4XI,  Samsung RS50N3913BC, 1/5]
+     - [ Amica FD2325.4XI,  Amica FK2695.4FTHAA, 1]
+     - [ Amica FD2325.4XI,  LG Premium GBB59PZRZS, 1/4]
+     - [ Amica FD2325.4XI,  Samsung Chef Collection RB41J7839S4, 1/6]
+     - [ Amica FD2325.4XI,  Bosch KGN39MB3A, 1/7]
+     - [ Amica FD2325.4XI,  Amica FK205.4, 1]
+     - [ Samsung RB37J501MB1,  Samsung RB33N341MSS, 4]
+     - [ Samsung RB37J501MB1,  Samsung RS50N3913BC, 6]
+     - [ Samsung RB37J501MB1,  Amica FK2695.4FTHAA, 7]
+     - [ Samsung RB37J501MB1,  LG Premium GBB59PZRZS, 5]
+     - [ Samsung RB37J501MB1,  Samsung Chef Collection RB41J7839S4, 9]
+     - [ Samsung RB37J501MB1,  Bosch KGN39MB3A, 8]
+     - [ Samsung RB37J501MB1,  Amica FK205.4, 6]
+     - [ Samsung RB33N341MSS,  Samsung RS50N3913BC, 4]
+     - [ Samsung RB33N341MSS,  Amica FK2695.4FTHAA, 5]
+     - [ Samsung RB33N341MSS,  LG Premium GBB59PZRZS, 3]
+     - [ Samsung RB33N341MSS,  Samsung Chef Collection RB41J7839S4, 9]
+     - [ Samsung RB33N341MSS,  Bosch KGN39MB3A, 6]
+     - [ Samsung RB33N341MSS,  Amica FK205.4, 7]
+     - [ Samsung RS50N3913BC,  Amica FK2695.4FTHAA, 4]
+     - [ Samsung RS50N3913BC,  LG Premium GBB59PZRZS, 1/4]
+     - [ Samsung RS50N3913BC,  Samsung Chef Collection RB41J7839S4, 6]
+     - [ Samsung RS50N3913BC,  Bosch KGN39MB3A, 4]
+     - [ Samsung RS50N3913BC,  Amica FK205.4, 5]
+     - [ Amica FK2695.4FTHAA,  LG Premium GBB59PZRZS, 1/6]
+     - [ Amica FK2695.4FTHAA,  Samsung Chef Collection RB41J7839S4, 1/4]
+     - [ Amica FK2695.4FTHAA,  Bosch KGN39MB3A, 1/4]
+     - [ Amica FK2695.4FTHAA,  Amica FK205.4, 1]
+     - [ LG Premium GBB59PZRZS,  Samsung Chef Collection RB41J7839S4, 7]
+     - [ LG Premium GBB59PZRZS,  Bosch KGN39MB3A, 5]
+     - [ LG Premium GBB59PZRZS,  Amica FK205.4, 6]
+     - [ Samsung Chef Collection RB41J7839S4,  Bosch KGN39MB3A, 1/4]
+     - [ Samsung Chef Collection RB41J7839S4,  Amica FK205.4, 1/3]
+     - [ Bosch KGN39MB3A,  Amica FK205.4, 2]
+   children: *alternatives

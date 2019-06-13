@@ -1,0 +1,84 @@
+> library("C50")
+> setwd("C:/Users/Desktop/APU/4")
+> dane <- read.csv('fridges.csv')
+> dane$Ocena <- factor(dane$Ocena)
+> head(dane)
+                  Model Pojemnosc.uzytkowa.lodowki Pojemnosc.uzytkowa.zamrazarki Wysokosc
+1          LG GSL761PZU                        405                           196      179
+2      Amica FD2325.4XI                        160                            44      144
+3   Samsung RB37J501MB1                        255                            98      201
+4   Samsung RB33N341MSS                        217                            98      185
+5   Samsung RS50N3913BC                        357                           144      179
+6 LG Premium GBB59PZRZS                        225                            75      190
+  Poziom.halasu Ocena
+1            39     3
+2            40     2
+3            39   4.5
+4            38   3.5
+5            43     4
+6            37   4.5
+> treeModel <- C5.0(x=dane[,-6], y=dane$Ocena)
+> treeModel
+
+Call:
+C5.0.default(x = dane[, -6], y = dane$Ocena)
+
+Classification Tree
+Number of samples: 10 
+Number of predictors: 5 
+
+Tree size: 3 
+
+Non-standard options: attempt to group attributes
+
+> summary(treeModel)
+
+Call:
+C5.0.default(x = dane[, -6], y = dane$Ocena)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Mon Jun 03 15:52:02 2019
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 10 cases (6 attributes) from undefined.data
+
+Decision tree:
+
+Poziom.halasu > 39: 1 (4/3)
+Poziom.halasu <= 39:
+:...Pojemnosc.uzytkowa.lodowki <= 255: 4.5 (3/1)
+    Pojemnosc.uzytkowa.lodowki > 255: 3 (3/1)
+
+
+Evaluation on training data (10 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	     3    5(50.0%)   <<
+
+
+	   (a)   (b)   (c)   (d)   (e)   (f)   (g)   (h)    <-classified as
+	  ----  ----  ----  ----  ----  ----  ----  ----
+	     1                                              (a): class 1
+	     1                                              (b): class 1.5
+	     1                                              (c): class 2
+	                       2                            (d): class 3
+	                                         1          (e): class 3.5
+	     1                                              (f): class 4
+	                                         2          (g): class 4.5
+	                       1                            (h): class 5
+
+
+	Attribute usage:
+
+	100.00%	Poziom.halasu
+	 60.00%	Pojemnosc.uzytkowa.lodowki
+
+
+Time: 0.0 secs
+
+> plot(treeModel)

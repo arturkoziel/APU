@@ -1,0 +1,100 @@
+> library("C50")
+> library("MASS")
+> data(Aids2)
+> head(Aids2)
+  state sex  diag death status T.categ age
+1   NSW   M 10905 11081      D      hs  35
+2   NSW   M 11029 11096      D      hs  53
+3   NSW   M  9551  9983      D      hs  42
+4   NSW   M  9577  9654      D    haem  44
+5   NSW   M 10015 10290      D      hs  39
+6   NSW   M  9971 10344      D      hs  36
+> treeModel <- C5.0(x=Aids2[,-6], y=Aids2$T.categ)
+> treeModel
+
+Call:
+C5.0.default(x = Aids2[, -6], y = Aids2$T.categ)
+
+Classification Tree
+Number of samples: 2843 
+Number of predictors: 6 
+
+Tree size: 14 
+
+Non-standard options: attempt to group attributes
+
+> summary(treeModel)
+
+Call:
+C5.0.default(x = Aids2[, -6], y = Aids2$T.categ)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Mon Jun 03 12:52:45 2019
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 2843 cases (7 attributes) from undefined.data
+
+Decision tree:
+
+sex = F:
+:...death <= 10763: blood (32/5)
+:   death > 10763:
+:   :...age <= 17: mother (5/2)
+:       age > 17:
+:       :...age <= 33:
+:           :...diag <= 10292: het (5/1)
+:           :   diag > 10292: id (28/11)
+:           age > 33:
+:           :...state = NSW: blood (12/5)
+:               state in {Other,QLD}: het (4)
+:               state = VIC: other (3/1)
+sex = M:
+:...age <= 19:
+    :...diag <= 9916: blood (10)
+    :   diag > 9916:
+    :   :...age <= 6: mother (4/1)
+    :       age > 6: haem (17/3)
+    age > 19:
+    :...age <= 55: hs (2598/219)
+        age > 55:
+        :...age <= 68: hs (108/30)
+            age > 68:
+            :...diag <= 11046: blood (14/6)
+                diag > 11046: hs (3)
+
+
+Evaluation on training data (2843 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    14  284(10.0%)   <<
+
+
+	   (a)   (b)   (c)   (d)   (e)   (f)   (g)   (h)    <-classified as
+	  ----  ----  ----  ----  ----  ----  ----  ----
+	  2460           1           2     2                (a): class hs
+	    72                                              (b): class hsid
+	    28          17     1           2                (c): class id
+	    20           5     8           7           1    (d): class het
+	    32                      14                      (e): class haem
+	    37           1           1    52     3          (f): class blood
+	                                   1     6          (g): class mother
+	    60           4                 4           2    (h): class other
+
+
+	Attribute usage:
+
+	100.00%	sex
+	 98.87%	age
+	  3.13%	death
+	  2.85%	diag
+	  0.67%	state
+
+
+Time: 0.0 secs
+
+> plot(treeModel)
